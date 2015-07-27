@@ -8,5 +8,6 @@
     <string name="title_activity_map">Map</string>
     <string name="rutas">rutas</string>
     <string name="Cercanas">Sugerencia</string>
+    <string name="title_activity_ruta">Ruta</string>
 
 </resources>
