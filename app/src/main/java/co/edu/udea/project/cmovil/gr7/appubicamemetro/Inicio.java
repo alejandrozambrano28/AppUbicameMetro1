@@ -2,20 +2,18 @@ package co.edu.udea.project.cmovil.gr7.appubicamemetro;
 
 import android.app.Fragment;
 import android.content.Context;
-
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.location.Address;
 import android.location.Criteria;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Bundle;
 import android.os.SystemClock;
 import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,7 +28,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.Circle;
-import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -52,7 +49,6 @@ import co.edu.udea.project.cmovil.gr7.appubicamemetro.Métodos.Maps_routesMethod
 public class Inicio extends ActionBarActivity implements OnTaskComplete, LocationListener{
     private final LatLng LOCATION_BURNABY = new LatLng(6.267847, -75.333332);
     private final LatLng LOCATION_SURREY = new LatLng(6.267847, -75.568533);
-    private LlenarBD manager;
     LatLng latLng; //Coordenadas actuales del usuario
     Marker markers;//Coordenadas a las cuales el usuario quiere llegar
     Circle circle;
@@ -67,9 +63,8 @@ public class Inicio extends ActionBarActivity implements OnTaskComplete, Locatio
     TextView transfer;
     ImageView imagen;
     Fragment ap;
+    private LlenarBD manager;
     //List<List<HashMap<String, String>>> routes;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
